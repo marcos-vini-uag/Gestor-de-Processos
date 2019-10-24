@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cliente: MyString
+  ex_adversa: MyString
+  natureza: MyString
+  assunto: MyString
+  tipo_acao: MyString
+  juizo: MyString
+  num_processo: MyString
+  ultima_movimentacao: MyString
+  ultimo_contato_cliente: 2019-10-20
+  contato_agendado: 2019-10-20
+  adv_principal: MyString
+  adv_assistente: MyString
+
+two:
+  cliente: MyString
+  ex_adversa: MyString
+  natureza: MyString
+  assunto: MyString
+  tipo_acao: MyString
+  juizo: MyString
+  num_processo: MyString
+  ultima_movimentacao: MyString
+  ultimo_contato_cliente: 2019-10-20
+  contato_agendado: 2019-10-20
+  adv_principal: MyString
+  adv_assistente: MyString

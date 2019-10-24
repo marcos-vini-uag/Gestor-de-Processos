@@ -1,0 +1,32 @@
+<%= form_with(model: advogado, local: true) do |form| %>
+  <% if advogado.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(advogado.errors.count, "error") %> prohibited this advogado from being saved:</h2>
+
+      <ul>
+      <% advogado.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome, id: :advogado_nome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email, id: :advogado_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :n_OAB %>
+    <%= form.text_field :n_OAB, id: :advogado_n_OAB %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

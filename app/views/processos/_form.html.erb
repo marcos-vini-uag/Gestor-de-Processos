@@ -1,0 +1,77 @@
+<%= form_with(model: processo, local: true) do |form| %>
+  <% if processo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(processo.errors.count, "error") %> prohibited this processo from being saved:</h2>
+
+      <ul>
+      <% processo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :cliente %>
+    <%= form.text_field :cliente, id: :processo_cliente %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ex_adversa %>
+    <%= form.text_field :ex_adversa, id: :processo_ex_adversa %>
+  </div>
+
+  <div class="field">
+    <%= form.label :natureza %>
+    <%= form.text_field :natureza, id: :processo_natureza %>
+  </div>
+
+  <div class="field">
+    <%= form.label :assunto %>
+    <%= form.text_field :assunto, id: :processo_assunto %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tipo_acao %>
+    <%= form.text_field :tipo_acao, id: :processo_tipo_acao %>
+  </div>
+
+  <div class="field">
+    <%= form.label :juizo %>
+    <%= form.text_field :juizo, id: :processo_juizo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :num_processo %>
+    <%= form.text_field :num_processo, id: :processo_num_processo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ultima_movimentacao %>
+    <%= form.text_field :ultima_movimentacao, id: :processo_ultima_movimentacao %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ultimo_contato_cliente %>
+    <%= form.date_select :ultimo_contato_cliente, id: :processo_ultimo_contato_cliente %>
+  </div>
+
+  <div class="field">
+    <%= form.label :contato_agendado %>
+    <%= form.date_select :contato_agendado, id: :processo_contato_agendado %>
+  </div>
+
+  <div class="field">
+    <%= form.label :adv_principal %>
+    <%= form.text_field :adv_principal, id: :processo_adv_principal %>
+  </div>
+
+  <div class="field">
+    <%= form.label :adv_assistente %>
+    <%= form.text_field :adv_assistente, id: :processo_adv_assistente %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit value='submit'%>
+  </div>
+<% end %>

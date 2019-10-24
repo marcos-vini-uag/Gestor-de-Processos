@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Processos</h1>
+<hr>
+<%= form_tag(processos_path, :method => :get) do %>
+  <%=text_field_tag 'search', nil, placeholder: 'Nº do processo' %>
+  <%=submit_tag "Buscar" %>
+<%end %>
+
+<%= link_to "Voltar", advogados_path %>
+<table>
+  <thead>
+    <tr>
+      <th>Cliente</th>
+      <th>Numero do processo</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @processos.each do |processo| %>
+      <tr>
+        <td><%= processo.cliente %></td>
+        <td><%= processo.num_processo %></td>
+        <td><%= link_to 'Show', processo, id: "s-#{processo.num_processo}" %></td>
+        <td><%= link_to 'Edit', edit_processo_path(processo), id: "e-#{processo.num_processo}" %></td>
+        <td><%= link_to 'Destroy', processo, id: "d-#{processo.num_processo}" ,method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Processo', new_processo_path %>

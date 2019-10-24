@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Advogados</h1>
+<%=link_to 'Sair',destroy_user_session_path, method: :delete %>
+<%=link_to 'Processos',processos_path %>
+<hr>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Email</th>
+      <th>N oab</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @advogados.each do |advogado| %>
+      <tr>
+        <td><%= advogado.nome %></td>
+        <td><%= advogado.email %></td>
+        <td><%= advogado.n_OAB %></td>
+        <td><%= link_to 'Show', advogado %></td>
+        <td><%= link_to 'Edit', edit_advogado_path(advogado) %></td>
+        <td><%= link_to 'Destroy', advogado, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Advogado', new_advogado_path %>

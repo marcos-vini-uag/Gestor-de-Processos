@@ -1,0 +1,67 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Processo - <%= @processo.num_processo %></h1>
+<hr>
+
+<p>
+  <strong>Cliente:</strong>
+  <%= @processo.cliente %>
+</p>
+
+<p>
+  <strong>Ex adversa:</strong>
+  <%= @processo.ex_adversa %>
+</p>
+
+<p>
+  <strong>Natureza:</strong>
+  <%= @processo.natureza %>
+</p>
+
+<p>
+  <strong>Assunto:</strong>
+  <%= @processo.assunto %>
+</p>
+
+<p>
+  <strong>Tipo acao:</strong>
+  <%= @processo.tipo_acao %>
+</p>
+
+<p>
+  <strong>Juizo:</strong>
+  <%= @processo.juizo %>
+</p>
+
+<p>
+  <strong>Num processo:</strong>
+  <%= @processo.num_processo %>
+</p>
+
+<p>
+  <strong>Ultima movimentacao:</strong>
+  <%= @processo.ultima_movimentacao %>
+</p>
+
+<p>
+  <strong>Ultimo contato cliente:</strong>
+  <%= @processo.ultimo_contato_cliente %>
+</p>
+
+<p>
+  <strong>Contato agendado:</strong>
+  <%= @processo.contato_agendado %>
+</p>
+
+<p>
+  <strong>Adv principal:</strong>
+  <%= @processo.adv_principal %>
+</p>
+
+<p>
+  <strong>Adv assistente:</strong>
+  <%= @processo.adv_assistente %>
+</p>
+
+<%= link_to 'Edit', edit_processo_path(@processo) %> |
+<%= link_to 'Back', processos_path %>
